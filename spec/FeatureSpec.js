@@ -14,4 +14,11 @@ describe("Airport/plane interaction", function() {
       expect(airport.planes()).toContain(plane);
     });
   });
+  describe("plane take off", function() {
+    it("instruct plane to take off", function() {
+      plane.land(airport);
+      plane.takeoff();
+      expect(airport.planes()).not.toContain(plane);
+    });
+  });
 });
